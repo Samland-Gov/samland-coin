@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tmpim/Krist"
+    "url": "https://github.com/Samland-Gov/samland-coin"
   },
   "author": "Lemmmy",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/tmpim/Krist/issues"
+    "url": "https://github.com/Samland-Gov/samland-coin/issues"
   },
-  "homepage": "https://github.com/tmpim/Krist",
+  "homepage": "https://github.com/Samland-Gov/samland-coin",
   "dependencies": {
     "@octokit/rest": "^18.0.12",
     "@types/lodash": "^4.14.181",
@@ -87,9 +87,9 @@
     "websocket-as-promised": "^2.0.1"
   },
   "apidoc": {
-    "title": "Krist",
-    "url": "https://krist.dev",
-    "description": "This is the documentation for the new Krist API.",
+    "title": "Samland Coin",
+    "url": "https://eco.minersonline.uk",
+    "description": "This is the documentation for the new Samland Coin API.",
     "order": [
       "AddressGroup",
       "GetAddress",

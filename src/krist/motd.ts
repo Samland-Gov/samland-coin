@@ -1,22 +1,24 @@
 /*
- * Copyright 2016 - 2022 Drew Edwards, tmpim
+ * (Samland Coin): Copyright 2023 Samuel Hulme
+ * (Krist): Copyright 2016 - 2022 Drew Edwards, tmpim
  *
- * This file is part of Krist.
+ * This file is part of Krist, and modified by Samland Coin
  *
- * Krist is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Krist, and Samland Coin is free software: you can redistribute it and
+ * /or modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
  *
- * Krist is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * Krist, and Samland Coin is distributed in the hope that it will be
+ * useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Krist. If not, see <http://www.gnu.org/licenses/>.
+ * along with Krist, and Samland Coin. If not, see <http://www.gnu.org/licenses/>.
  *
- * For more project information, see <https://github.com/tmpim/krist>.
+ * For more Krist information, see <https://github.com/tmpim/krist>.
+ * For more Samland Coin information, see <https://github.com/Samland-Gov/samland-coin>.
  */
 
 import packageJson from "../../package.json";
@@ -79,7 +81,7 @@ export interface DetailedMotd {
     currency_symbol: string;
   };
 
-  notice: string;
+  notices: string[];
 }
 
 export async function getMotd(): Promise<Motd> {
@@ -132,15 +134,17 @@ export async function getDetailedMotd(): Promise<DetailedMotd> {
     },
 
     currency: {
-      address_prefix: "k",
-      name_suffix: "kst",
+      address_prefix: "s",
+      name_suffix: "zlc",
 
-      currency_name: "Krist",
-      currency_symbol: "KST"
+      currency_name: "Samland Coin",
+      currency_symbol: "ZLC"
     },
 
     // NOTE: It is against the license to modify this string on a fork node
-    notice: "Krist was originally created by 3d6 and Lemmmy. It is now owned"
-          + " and operated by tmpim, and licensed under GPL-3.0."
+    notices: [
+      "Samland Coin is a fork of Krist, and licensed under GPL-3.0.",
+      "Krist was originally created by 3d6 and Lemmmy. It is now owned"
+       + " and operated by tmpim, and licensed under GPL-3.0."]
   };
 }

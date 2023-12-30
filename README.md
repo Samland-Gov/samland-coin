@@ -1,28 +1,29 @@
-# Krist
+# Samland Coin
 
-This is the new official Krist node. It is written in Node.js and TypeScript.
+This is the new official Samland Coin node. It is written in Node.js and TypeScript.
+This is a fork of [Kirst](https://github.com/tmpim/Krist).
 
 ## Conventional Commits
 
-Commit messages are written with 
+Commit messages are written with
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ## [API Documentation](https://krist.dev/docs)
 
-The documentation is generated with [apiDoc](https://apidocjs.com). You can find 
-a live copy of the API documentation [here](https://krist.dev/docs). Additional
-documentation for Krist itself and libraries can be found 
-[here](https://docs.krist.dev).
+The documentation is generated with [apiDoc](https://apidocjs.com). You can find
+a live copy of the API documentation [here](https://eco.minersonline.uk/docs). Additional
+documentation for Samland Coin itself and libraries can be found
+[here](https://eco.minersonline.uk/dev).
 
 ## Docker Installation
 
 The preferred method of installation is Docker. The Docker images are published
-on the GitHub Container Registry under `ghcr.io/tmpim/krist`.
+on the GitHub Container Registry under `ghcr.io/Samland-Gov/samland-coin`.
 
 MySQL/MariaDB and Redis are required too. There are two options to connect to
 the databases. The easier way is to run MySQL and Redis on the host machine,
 and specify the `DB_HOST=${DOCKER_GATEWAY}` and `REDIS_HOST=${DOCKER_GATEWAY}`
-environment variables to Krist. Alternatively, you can run MariaDB and Redis
+environment variables to Samland Coin. Alternatively, you can run MariaDB and Redis
 in Docker too (left as an exercise to the reader).
 
 Example usage with Docker Compose:
@@ -31,7 +32,7 @@ Example usage with Docker Compose:
 version: "3.9"
 services:
   krist:
-    image: "ghcr.io/tmpim/krist:latest"
+    image: "ghcr.io/Samland-Gov/samland-coin:latest"
     environment:
       - DB_PASS=${DB_PASS}
       - PUBLIC_URL=krist.dev
@@ -53,7 +54,7 @@ services:
 
 #### Webserver Configuration
 
-This Krist node is supposed to be ran behind a serverside proxy. The file
+This Samland Coin node is supposed to be ran behind a serverside proxy. The file
 `casket_example.casket` includes a basic configuration for how to set up the
 proxy in [Casket](https://github.com/tmpim/casket). The Node.js webserver is not
 designed to and should not be exposed to the public web. HTTPS is required.
@@ -66,8 +67,7 @@ following environment variables:
 | Variable     | Default      | Description                                             |
 |--------------|--------------|---------------------------------------------------------|
 | `DB_PASS`    | **required** | The password of the database user.                      |
-| `PUBLIC_URL` | **required** | The FQDN of the Krist server (e.g. `krist.dev`). |
-
+| `PUBLIC_URL` | **required** | The FQDN of the Samland Coin server (e.g. `krist.dev`). |
 
 The following optional environment variables may also be specified:
 
@@ -86,7 +86,7 @@ The following optional environment variables may also be specified:
 | `REDIS_PORT` | `6379` | The port of the redis server. |
 | `REDIS_PREFIX` | `krist:` | The prefix of the redis keys. |
 | `TEST_REDIS_PREFIX` | `test_krist:` | *Required for testing*. If `NODE_ENV` is `test` (e.g. running Jest), the prefix of the redis keys. |
-| `NODE_ENV` | `development` | Either `development` or `production`. If `development`, the Krist server runs in debug mode. |
+| `NODE_ENV` | `development` | Either `development` or `production`. If `development`, the Samland Coin server runs in debug mode. |
 | `FORCE_INSECURE` | `false` | If `true`, force the websocket gateway to return `ws://` URLs instead of `wss://`. Used for development only. |
 | `GITHUB_TOKEN` |  | Any valid GitHub token (e.g. a PAT with no scopes) to obtain avatars for the homepage. Completely optional. |
 | `USE_PROMETHEUS` | `false` | If `true`, enables Prometheus metrics on the `/metrics` endpoint. |
@@ -97,4 +97,5 @@ For convenience, you may specify environment variables in a `.env` file.
 ## License
 
 This project is released under **GPL-3.0**. More information can be found in the
-`LICENSE` file.
+`LICENSE` file. Samland Coin is a fork of [Kirst](https://github.com/tmpim/Krist),
+which is also licensed under the **GPL-3.0**.
