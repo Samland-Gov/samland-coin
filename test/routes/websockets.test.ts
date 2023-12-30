@@ -122,7 +122,7 @@ describe("websocket connection", () => {
         currency_name: "Samland Sammer", currency_symbol: "ZLS"
       });
 
-      expect(helloData.notice).to.equal([
+      expect(helloData.notices).to.deep.equal([
         "Samland Coin is a fork of Krist, and licensed under GPL-3.0.",
         "Krist was originally created by 3d6 and Lemmmy. It is now owned and operated by tmpim, and licensed under GPL-3.0."
       ]);

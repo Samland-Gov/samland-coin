@@ -66,7 +66,7 @@ describe("v2 routes: motd", () => {
       currency_name: "Samland Sammer", currency_symbol: "ZLS"
     });
 
-    expect(res.body.notices).to.equal([
+    expect(res.body.notices).to.deep.equal([
       "Samland Coin is a fork of Krist, and licensed under GPL-3.0.",
       "Krist was originally created by 3d6 and Lemmmy. It is now owned and operated by tmpim, and licensed under GPL-3.0."
     ]);
