@@ -135,10 +135,10 @@ export async function getDetailedMotd(): Promise<DetailedMotd> {
 
     currency: {
       address_prefix: "s",
-      name_suffix: "zlc",
+      name_suffix: "zls",
 
-      currency_name: "Samland Coin",
-      currency_symbol: "ZLC"
+      currency_name: "Samland Sammer",
+      currency_symbol: "ZLS"
     },
 
     // NOTE: It is against the license to modify this string on a fork node
