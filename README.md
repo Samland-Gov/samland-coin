@@ -18,7 +18,7 @@ documentation for Samland Coin itself and libraries can be found
 ## Docker Installation
 
 The preferred method of installation is Docker. The Docker images are published
-on the GitHub Container Registry under `ghcr.io/Samland-Gov/samland-coin`.
+on the GitHub Container Registry under `ghcr.io/samland-Gov/samland-coin`.
 
 MySQL/MariaDB and Redis are required too. There are two options to connect to
 the databases. The easier way is to run MySQL and Redis on the host machine,
