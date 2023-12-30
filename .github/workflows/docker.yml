@@ -17,7 +17,7 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: ghcr.io/${{ github.repository }}
+          images: ghcr.io/SamlandGov/SamlandCoin
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1

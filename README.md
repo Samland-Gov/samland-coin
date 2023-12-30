@@ -32,7 +32,7 @@ Example usage with Docker Compose:
 version: "3.9"
 services:
   krist:
-    image: "ghcr.io/Samland-Gov/samland-coin:latest"
+    image: "ghcr.io/SamlandGov/SamlandCoin:latest"
     environment:
       - DB_PASS=${DB_PASS}
       - PUBLIC_URL=krist.dev
