@@ -85,7 +85,7 @@ export interface DetailedMotd {
 }
 
 export async function getMotd(): Promise<Motd> {
-  const motd = await redis.get(rKey("motd")) || "Welcome to Krist!";
+  const motd = await redis.get(rKey("motd")) || "Welcome to Samland Coin!";
   const rawDate = await redis.get(rKey("motd:date"));
   const date = typeof rawDate === "string" ? new Date(rawDate) : new Date(0);
 

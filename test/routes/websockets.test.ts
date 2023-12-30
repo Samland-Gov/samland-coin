@@ -1,22 +1,24 @@
 /*
- * Copyright 2016 - 2022 Drew Edwards, tmpim
+ * (Samland Coin): Copyright 2023 Samuel Hulme
+ * (Krist): Copyright 2016 - 2022 Drew Edwards, tmpim
  *
- * This file is part of Krist.
+ * This file is part of Krist, and modified by Samland Coin
  *
- * Krist is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * Krist, and Samland Coin is free software: you can redistribute it and
+ * /or modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
  *
- * Krist is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * Krist, and Samland Coin is distributed in the hope that it will be
+ * useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with Krist. If not, see <http://www.gnu.org/licenses/>.
+ * along with Krist, and Samland Coin. If not, see <http://www.gnu.org/licenses/>.
  *
- * For more project information, see <https://github.com/tmpim/krist>.
+ * For more Krist information, see <https://github.com/tmpim/krist>.
+ * For more Samland Coin information, see <https://github.com/Samland-Gov/samland-coin>.
  */
 
 import { expect } from "chai";
@@ -90,7 +92,7 @@ describe("websocket connection", () => {
       if (!helloData) throw new Error("a");
       expect(helloData.ok).to.be.true;
 
-      expect(helloData.motd).to.equal("Welcome to Krist!");
+      expect(helloData.motd).to.equal("Welcome to Samland Coin!");
       expect(helloData.set).to.be.ok; // backwards compat for the HTTP API
       expect(helloData.motd_set).to.be.ok;
 
@@ -116,11 +118,14 @@ describe("websocket connection", () => {
 
       expect(helloData.currency).to.be.an("object");
       expect(helloData.currency).to.deep.equal({
-        address_prefix: "k", name_suffix: "kst",
-        currency_name: "Krist", currency_symbol: "KST"
+        address_prefix: "s", name_suffix: "zls",
+        currency_name: "Samland Sammer", currency_symbol: "ZLS"
       });
 
-      expect(helloData.notice).to.equal("Krist was originally created by 3d6 and Lemmmy. It is now owned and operated by tmpim, and licensed under GPL-3.0.");
+      expect(helloData.notice).to.equal([
+        "Samland Coin is a fork of Krist, and licensed under GPL-3.0.",
+        "Krist was originally created by 3d6 and Lemmmy. It is now owned and operated by tmpim, and licensed under GPL-3.0."
+      ]);
     });
   });
 });
